@@ -1,5 +1,5 @@
-const EXCHANGE_RATE_API_KEY = '20ae9c94d9787bef1eb2cb0d';
-const CALENDARIFIC_API_KEY = 'rOZSIVo0yuqF8XAs7sRr240oLEE5S9dB';
+const EXCHANGE_RATE_API_KEY = '';
+const CALENDARIFIC_API_KEY = '';
 
 let countries = [];
 
