@@ -4,6 +4,8 @@ This repository contains a lightweight environment that hosts a website that uti
 
 You will see instructions on how to configure this environment locally using Docker to deploy it on multiple servers and configure a load balancer to efficiently route the traffic between them.
 
+Watch the video walkthrough [here](https://youtu.be/ukpXe7G8HnE)
+
 ## Requirements
 
 - Docker installed on your machine
