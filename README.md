@@ -14,7 +14,7 @@ You will see instructions on how to configure this environment locally using Doc
 
 1. Clone this repository
    ```bash
-   git clone https://cyuzuzo-aime/country_information_overview.git
+   git clone https://github.com/cyuzuzo-aime/country_information_overview.git
    cd country_information_overview
    ```
 2. Bring up the lab environment (builds the images on first run):
