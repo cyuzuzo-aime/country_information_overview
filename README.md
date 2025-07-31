@@ -17,7 +17,9 @@ You will see instructions on how to configure this environment locally using Doc
    git clone https://github.com/cyuzuzo-aime/country_information_overview.git
    cd country_information_overview
    ```
-   If you just want to see the website in your browser, run `cd countries-information-website` and run the index.html.
+2. If you want to just continue set up docker, continue to the next point. If you  want to see the website in your browser, run `cd countries-information-website` and open the index.html.
+*Note that this requires you both exchange_rate API and Calendrific API*
+Once you have them ready, paste them in the top of script.js
 
    Otherwise, read the next instructions to run the docker environment
 2. Bring up the lab environment (builds the images on first run):
