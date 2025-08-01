@@ -1,6 +1,6 @@
 # Countries Information Overview
 
-This repository contains a lightweight environment that hosts a website that utilizes APIs to help people know various information about countries they want to visit, relocate to, or research about; including statistics, culture, finances, holidays, and more.
+This web app uses multiple APIs know various information about countries they want to visit, relocate to, or research about; including statistics, culture, finances, holidays, and more.
 
 You will see instructions on how to configure this environment locally using Docker to deploy it on multiple servers and configure a load balancer to efficiently route the traffic between them.
 
