@@ -14,31 +14,34 @@ Watch the video walkthrough [here](https://youtu.be/ukpXe7G8HnE)
 
 ## Setup
 
-1. Clone this repository
-   ```bash
-   git clone https://github.com/cyuzuzo-aime/country_information_overview.git
-   cd country_information_overview
-   ```
-2. If you want to just continue set up docker, continue to the next point. If you  want to see the website in your browser, run `cd countries-information-website` and open the index.html.
-*Note that this requires you both exchange_rate API and Calendrific API*
-Once you have them ready, paste them in the top of script.js
+#### Clone the Repository
 
-   Otherwise, read the next instructions to run the docker environment
-2. Bring up the lab environment (builds the images on first run):
-   ```bash
-   docker compose up -d --build
-   ```
-3. Verify that the containers are running:
-   ```bash
-   docker compose ps
-   ```
-   You should see `web-01`, `web-02`, and `lb-01` online. The services are attached to the `lablan` network with the following addresses:
+```bash
+git clone https://github.com/jniyitegek/akabandofarms.git
+cd akabandofarms
+```
 
-   | Container | IP           | Exposed Ports |
-   |---------- |------------- |---------------|
-   | web-01    | 172.20.0.11  | 2211 (SSH), 8080 (HTTP) |
-   | web-02    | 172.20.0.12  | 2212 (SSH), 8081 (HTTP) |
-   | lb-01     | 172.20.0.10  | 2210 (SSH), 8082 (HTTP) |
+#### Build the Docker Image
+
+```bash
+docker build -t jniyitegek/akabandofarms:v1 .
+```
+This command creates the Docker image for the application and tags it as `jniyitegek/akabandofarms:v1`.
+
+#### Run the Container
+
+```bash
+docker run -p 8080:8080 jniyitegek/akabandofarms:v1
+```
+This command starts the container and maps your computer's port 8080 to the application's internal port 8080.
+
+#### Access the Application
+
+Open your web browser and go to [http://localhost:8080](http://localhost:8080) to view the application. Alternatively, you can use curl to test the connection:
+
+```bash
+curl http://localhost:8080
+```
 4. Connect to `web-01` and configure the first server
 
    Open a new terminal and run this command. (Password: pass123)
