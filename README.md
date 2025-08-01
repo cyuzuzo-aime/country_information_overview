@@ -17,21 +17,21 @@ Watch the video walkthrough [here](https://youtu.be/ukpXe7G8HnE)
 #### Clone the Repository
 
 ```bash
-git clone https://github.com/jniyitegek/akabandofarms.git
-cd akabandofarms
+git clone https://github.com/aimecyuzuzo/country-info-overview.git
+cd country-info-overview
 ```
 
 #### Build the Docker Image
 
 ```bash
-docker build -t jniyitegek/akabandofarms:v1 .
+docker build -t aimecyuzuzo/country-info-overview:v1 .
 ```
-This command creates the Docker image for the application and tags it as `jniyitegek/akabandofarms:v1`.
+This command creates the Docker image for the application and tags it as `aimecyuzuzo/country-info-overview:v1`.
 
 #### Run the Container
 
 ```bash
-docker run -p 8080:8080 jniyitegek/akabandofarms:v1
+docker run -p 8080:8080 aimecyuzuzo/country-info-overview:v1
 ```
 This command starts the container and maps your computer's port 8080 to the application's internal port 8080.
 
@@ -42,7 +42,10 @@ Open your web browser and go to [http://localhost:8080](http://localhost:8080) t
 ```bash
 curl http://localhost:8080
 ```
-4. Connect to `web-01` and configure the first server
+
+After cloning and running docker compose from the [web_infra_lab](https://github.com/waka-man/web_infra_lab), follow these steps to run the web servers.
+
+1. Connect to `web-01` and configure the first server
 
    Open a new terminal and run this command. (Password: pass123)
    ```bash
@@ -65,7 +68,7 @@ curl http://localhost:8080
    ```
    Now go back to the terminal of your local machine.
    That's it.
-5. Connect to `web-02` and configure it the same way as above
+2. Connect to `web-02` and configure it the same way as above
 
    Open a new terminal and run this command. (Password: pass123)
    ```bash
@@ -87,7 +90,7 @@ curl http://localhost:8080
    sudo docker create --name temp aimecyuzuzo/country-info-overview:v1 && sudo docker cp temp:/usr/share/nginx/html ./static-site && sudo docker rm temp && cd static-site && python3 -m http.server 8080 --bind 0.0.0.0
    ```
    Now go back to the terminal of your local machine.
-6. Configure the load balancer
+3. Configure the load balancer
 
    Open a new terminal, and run this command. (Password: pass123)
    ```bash
@@ -132,7 +135,7 @@ curl http://localhost:8080
    ```bash
    haproxy -f /etc/haproxy/haproxy.cfg &
    ```
-7. Run a request through the load balancer
+4. Run a request through the load balancer
 
    While inside the load balancer server's terminal, run this command:
    ```bash
